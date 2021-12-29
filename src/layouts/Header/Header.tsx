@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
 // import mui Material components
 import { AppBar, Toolbar, Hidden, Stack, IconButton } from '@mui/material';
 // styles
-import { useTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 // icons
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -19,8 +18,7 @@ import Categories from 'components/Categories/Categories';
 
 export default function Header() {
 
-    const theme = useTheme();
-    const classes = makeStyles(styles(theme))();
+    const classes = makeStyles(styles)();
 
     return (
         <AppBar position='fixed'>
@@ -32,7 +30,7 @@ export default function Header() {
                 </Hidden>
                 <SearchBar />
                 <Hidden mdDown>
-                    <Stack direction={'row'} spacing={2}>
+                    <Stack direction='row' spacing={2}>
                         <Avatar>
                             <IconButton>
                                 <PersonOutlineIcon />

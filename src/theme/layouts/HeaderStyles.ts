@@ -1,6 +1,4 @@
-import { Theme } from "@mui/material/styles";
-
-const HeaderStyles = (theme: Theme, ) => ({
+const HeaderStyles = () => ({
     rootHeader: {
         display: 'flex',
         justifyContent: 'space-around',

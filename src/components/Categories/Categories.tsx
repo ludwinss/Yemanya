@@ -12,7 +12,7 @@ import { styled } from '@mui/material/styles';
 // import model
 import { CategoriesProps } from 'common/models';
 
-function Categories(props: CategoriesProps) {
+function Categories({ displayLabel }: CategoriesProps) {
 
     const ButtonStyled = styled(Button)({
         height: '35px',
@@ -23,12 +23,12 @@ function Categories(props: CategoriesProps) {
     return (
         <ButtonStyled
             endIcon={
-                props.displayLabel ? <ArrowRightRoundedIcon /> : <ArrowDropDownRoundedIcon  />
+                displayLabel ? <ArrowRightRoundedIcon /> : <ArrowDropDownRoundedIcon />
             }
             size='small'
         >
-            <WidgetsRoundedIcon fontSize='small'/>
-            {props.displayLabel ? 'Categories' : ''}
+            <WidgetsRoundedIcon fontSize='small' />
+            {displayLabel ? 'Categories' : ''}
         </ButtonStyled>
     )
 

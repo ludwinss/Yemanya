@@ -3,7 +3,7 @@ import { Theme } from "@mui/material/styles";
 const HeaderStyles = (theme: Theme) => ({
     rootFooter: {
         backgroundColor: theme.palette.primary.dark,
-        padding: ' 1% 1% 10% 1%',
+        padding: '3rem 1% 10% 1%',
     },
     itemFooter: {
         color: 'rgba(240,241,246,.8)',
@@ -16,8 +16,8 @@ const HeaderStyles = (theme: Theme) => ({
             backgroundColor: theme.palette.primary.dark,
             color: 'rgba(240,241,246,.8)',
         },
-        "& a:hover":{
-            color:'white'
+        "& a:hover": {
+            color: 'white'
         }
     },
 })

@@ -9,11 +9,11 @@ import { styled } from '@mui/material/styles'
 
 export default function SearchBar() {
 
-    const IconAdornment = (< InputAdornment position='start' ><SearchIcon  /></InputAdornment>)
-    const TextFieldStyled = styled(TextField)((theme) => ({
-        '& .MuiInputBase-root':{
-            borderRadius:25,
-            minWidth:'310px'
+    const IconAdornment = (< InputAdornment position='start' ><SearchIcon /></InputAdornment>)
+    const TextFieldStyled = styled(TextField)(() => ({
+        '& .MuiInputBase-root': {
+            borderRadius: 25,
+            minWidth: '310px'
         }
     }))
     return (

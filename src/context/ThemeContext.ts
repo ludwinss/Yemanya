@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const ThemeContext = createContext((themeName: string): void => { });
+export const ThemeContext = createContext((themeName: any): void => { themeName() });

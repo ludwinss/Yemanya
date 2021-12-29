@@ -24,13 +24,13 @@ const about = {
     ]
 }
 
-const links = {
-    social: {
-        facebook: 'https://www.facebook.com/yemanya.org/asdasd1212fskdjal',
-        whatsapp: 'whatsapp.com',
-        telegram: 'telegram.com'
-    }
-}
+// const links = {
+//     social: {
+//         facebook: 'https://www.facebook.com/yemanya.org/asdasd1212fskdjal',
+//         whatsapp: 'whatsapp.com',
+//         telegram: 'telegram.com'
+//     }
+// }
 
 export default function Footer() {
 
@@ -47,13 +47,13 @@ export default function Footer() {
                 <Grid item lg={3} sm={6} xs={12} className={classes.itemFooter}>
                     <Typography variant='h5' component='div' gutterBottom>About Us</Typography>
                     <Stack spacing={1} marginY={2}>
-                        <Link href="#" underline="none" color='inherit'>
+                        <Link href="#top" underline="none" color='inherit'>
                             About Deveploment
                         </Link>
-                        <Link href="#" underline="none" color='inherit'>
+                        <Link href="#top" underline="none" color='inherit'>
                             Terms & Conditions
                         </Link>
-                        <Link href="#" underline="none" color='inherit'>
+                        <Link href="#top" underline="none" color='inherit'>
                             Privacy
                         </Link>
                     </Stack>
@@ -61,9 +61,7 @@ export default function Footer() {
                 <Grid item lg={3} sm={12} xs={12} className={classes.itemFooter}>
                     <Typography variant='h5' component='div' gutterBottom>Contact Us</Typography>
                     <Stack spacing={1} marginY={2}>
-                        {about.contactUs.map((value: string, index: number) => {
-                            return <Typography key={index} variant="body2" component='div' gutterBottom> {value}</Typography>
-                        })}
+                        {about.contactUs.map((value: string) => <Typography key={value} variant="body2" component='div' gutterBottom> {value}</Typography>)}
                     </Stack>
                     <ButtonGroup >
                         <IconButton href='/' >

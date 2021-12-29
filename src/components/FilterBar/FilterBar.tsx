@@ -1,17 +1,26 @@
 import React from 'react';
 
 // import Mui Material components
-import { Paper, IconButton, Button, Stack, Typography, Select, MenuItem } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
+// styles
+import { useTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
 // components
+import { Filter, SwitchView } from 'components/Controls'
+
+import styles from 'theme/components/FilterBarStyles';
 
 export default function FilterBar() {
+
+    const theme = useTheme()
+    const classes = makeStyles(styles(theme))();
+
     return (
-        <Paper sx={{ width: '100%' }}>
-            <Stack justifyContent='flex-end' alignItems='center' paddingY={2} paddingX={3} direction='row'>
-
-
-            </Stack>
+        <Paper className={classes.root}>
+            <Typography variant='caption' marginLeft={2} marginRight='auto' ><strong>48</strong> Productos</Typography>
+            <Filter />
+            <SwitchView />
         </Paper>
     )
 

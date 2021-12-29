@@ -4,9 +4,10 @@ import React from 'react';
 import { Avatar as MuiAvatar } from '@mui/material';
 
 import { AvatarProps } from 'common/models'
-export default function Avatar(props: AvatarProps) {
+
+export default function Avatar({ children }: AvatarProps) {
     return (
-        <MuiAvatar >{props.children}</MuiAvatar>
+        <MuiAvatar >{children}</MuiAvatar>
     )
 
 };

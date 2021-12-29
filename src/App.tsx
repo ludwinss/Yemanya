@@ -2,13 +2,16 @@ import React from 'react';
 
 import MainPage from 'pages/MainPage/MainPage';
 
-// import ThemeProvider 
+// import  Hooks
+import { FilterBarProvider } from 'context/FilterBarContext';
 import ThemeProviderWrapper from 'theme/ThemeProviderWrapper';
 
 function App() {
   return (
     <ThemeProviderWrapper>
-      <MainPage />
+      <FilterBarProvider>
+        <MainPage />
+      </FilterBarProvider>
     </ThemeProviderWrapper>
   );
 }
