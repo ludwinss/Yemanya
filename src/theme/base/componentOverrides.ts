@@ -9,21 +9,25 @@ export default function componentsOverrides(theme: Theme): Components {
                 }
             }
         },
-        MuiListItem: {
+        MuiListItemIcon: {
             styleOverrides: {
                 root: {
-                    '&:hover': {
-                        borderBottom: '1px solid black'
-                    }
-                }
+                    color: theme.palette.primary.main,
+                },
+
             }
         },
         MuiListItemButton: {
             styleOverrides: {
                 root: {
                     '&:hover': {
-                        backgroundColor: 'rgba(255,255,255)'
-                    }
+                        borderLeft: `5px solid  ${theme.palette.primary.main}`,
+                        backgroundColor: theme.palette.secondary.main,
+                        color: theme.palette.secondary.contrastText,
+                        '& .MuiListItemIcon-root': {
+                            color: theme.palette.secondary.contrastText,
+                        }
+                    },
                 }
             }
         },
@@ -34,11 +38,18 @@ export default function componentsOverrides(theme: Theme): Components {
             styleOverrides: {
                 root: {
                     background: 'white',
+                    '&:hover': {
+                        backgroundColor: theme.palette.secondary.main,
+                        color: theme.palette.secondary.contrastText,
+                        '& .MuiListItemIcon-root': {
+                            color: theme.palette.secondary.contrastText,
+                        }
+                    },
                     '&.MuiSelected': {
-                        backgroundColor: theme.palette.action.focus
+                        color: theme.palette.secondary.contrastText,
+                        backgroundColor: theme.palette.secondary.light
                     }
-
-                }
+                },
             }
         },
         MuiTypography: {

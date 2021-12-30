@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import Mui Materialize components
-import { Container, Grid } from '@mui/material';
+import { Container, Grid, Hidden, Paper } from '@mui/material';
 // styles
 // import {useTheme} from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
@@ -18,6 +18,7 @@ import Footer from 'layouts/Footer/Footer';
 import { useFilterBarContext } from 'context/FilterBarContext';
 
 import styles from 'theme/pages/MainPageStyles';
+import MenuList from 'components/MenuList/MenuList';
 
 export default function MainPage() {
     const { filterBar } = useFilterBarContext();
@@ -33,7 +34,14 @@ export default function MainPage() {
                     </Grid>
                 </Grid>
                 <Grid container direction='row' >
-                    <Grid item xs={12} className={classes.grid}>
+                    <Hidden mdDown>
+                        <Grid item xs={3}>
+                            <Paper>
+                                <MenuList />
+                            </Paper>
+                        </Grid>
+                    </Hidden>
+                    <Grid item xs={12} md={9} className={classes.grid} paddingX={1}>
                         <Card />
                         <Card />
                         <Card />
